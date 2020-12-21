@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Joel Lombardo — Husband, Pastor, Designer/Developer, Sysadmin</title>
-	<meta content="I designed and developed web things in Minneapolis. Now I live up north and wear a Carhartt." name="description">
+	<meta content="Joel Lombardo is a web developer, designer, pastor, and sysadmin based in Minnesota." name="description">
 	<meta content="Joel Lombardo" name="author">
 	<meta name="robots" content="index, follow">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
@@ -35,6 +35,7 @@
 </head>
 
 <body>
+	<!-- < Main Content -->
 	<section>
 		<img id="signature" src="img/sig.svg" alt="Joel's signature">
 		<h1>Hi, I'm Joel Lombardo. I'm a <span class="underline purple">husband</span> & <span class="nowrap"><span class="underline purple">dad</span>,</span> <span class="nowrap"><span class="underline seafoam">pastor</span>,</span> <span class="nowrap"><span id="designer-toggle" class="underline red">designer</span>,</span> <span class="nowrap"><span id="developer-toggle" class="underline green">web developer</span>,</span> and <span class="nowrap"><span id="sysadmin-toggle" class="underline yellow">sysadmin</span>.</span></h1>
@@ -44,6 +45,7 @@
 			<p>I'm on <a class="underline twitter" href="https://twitter.com/joellombardo" rel="noopener" target="_blank">Twitter</a>, but I don't <a class="underline twitter" href="https://twitter.com/KeldonEllis/status/223150096173375490" rel="noopener" target="_blank">tweet</a>.</p>
 		</div>
 	</section>
+	<!-- /> Main Content -->
 
 	<!-- < Developer Animation Components -->
 	<img id="developer" src="img/code.svg" alt="An image showing the HTML code of Joel's signature image">
@@ -71,17 +73,23 @@
 	</div>
 	<!-- /> Sysadmin Animation Components -->
 
+	<!-- < Animation Scripts -->
 	<script>
 		document.getElementById('developer-toggle').addEventListener('mouseover',function(){document.getElementById('signature').classList.add('dev-logo-animation');document.getElementById('developer').classList.add('dev-animation')});document.getElementById('developer-toggle').addEventListener('mouseleave',function(){document.getElementById('signature').classList.remove('dev-logo-animation');document.getElementById('developer').classList.remove('dev-animation')});document.getElementById('designer-toggle').addEventListener('mouseover',function(){document.getElementById('designer').classList.add('ruler-animation');document.getElementById('ruler-line').classList.add('ruler-line-animation');document.getElementById('vertical-cursor').classList.add('hard-fade-out');document.getElementById('pixel-counter').classList.add('pixel-counter-animation');document.getElementById('bounding-box').classList.add('bounding-box-animation')});document.getElementById('designer-toggle').addEventListener('mouseleave',function(){document.getElementById('designer').classList.remove('ruler-animation');document.getElementById('ruler-line').classList.remove('ruler-line-animation');document.getElementById('vertical-cursor').classList.remove('hard-fade-out');document.getElementById('pixel-counter').classList.remove('pixel-counter-animation');document.getElementById('bounding-box').classList.remove('bounding-box-animation')});var txt='';document.getElementById('sysadmin-toggle').addEventListener('mouseover',function(){document.getElementById('sysadmin').classList.add('sysadmin-animation');document.getElementById('sysadmin').classList.remove('hidden');document.getElementById('close').classList.add('close-button-animation');var i=0;txt="Add-ADGroupMember -Identity 'ITDEPT' -Member jlombardo";consoleType();function consoleType(){if(i<txt.length){document.getElementById('typing').innerHTML+=txt.charAt(i);i++;setTimeout(consoleType,40)}}});document.getElementById('sysadmin-toggle').addEventListener('mouseleave',function(){document.getElementById('typing').innerHTML='';document.getElementById('sysadmin').classList.add('hidden');document.getElementById('close').classList.remove('close-button-animation');txt=''})
 	</script>
+	<!-- /> Animation Scripts -->
 
+	<!-- > Cloudflare Analytics -->
+	<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e91c0814a8de4a68b76fa0d10adadfae"}'></script>
+	<!-- /> Cloudflare Analytics -->
+
+	<!-- > Schema -->
 	<script type="application/ld+json">
 		{
 			"@context": "http://schema.org/",
 			"@type": "Person",
 			"name": "Joel Lombardo",
 			"url": "https://joellombardo.com",
-			"image": "https://joellombardo.com/img/profile.png",
 			"sameAs": [
 				"https://twitter.com/joellombardo/",
 				"https://instagram.com/joellombardo/",
@@ -91,7 +99,7 @@
 			"jobTitle": "Pastor, Web Developer, System Administrator"  
 		}
 	</script>
-
+	<!-- /> Schema -->
 </body>
 
 </html>
